@@ -3,13 +3,9 @@
 # Test against these versions of Node.js.
 environment:
   MOCHA_REPORTER: "mocha-appveyor-reporter"
-  matrix:
-    - nodejs_version: "6"
-      platform: x86
-    - nodejs_version: "8"
-      platform: x86
-    - nodejs_version: "9"
-      platform: x86
+  nodejs_version: "6"
+  
+platform: x86
 
 # Install scripts. (runs after repo cloning)
 install:
@@ -20,7 +16,6 @@ install:
   - appveyor-retry yarn add mocha-appveyor-reporter # must be installed locally.
   - node --version
   - yarn --version
-
 
 cache:
   - '%LOCALAPPDATA%\Yarn'
