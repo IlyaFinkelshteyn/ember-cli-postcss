@@ -24,8 +24,8 @@ cache:
 test_script:
   # Output useful info for debugging.
   - git rev-parse HEAD
-  - cd node_modules\.bin
-  - ember try:each
+  - cd node_modules
+  - .bin\ember try:each
 
 # Don't actually build.
 build: off
