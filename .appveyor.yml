@@ -24,7 +24,7 @@ cache:
 test_script:
   # Output useful info for debugging.
   - git rev-parse HEAD
-  - dir /s loader*
+  - xcopy node_modules\loader.js\dist\loader loader /e /i /h
   - cmd: node_modules/.bin/ember try:each
 
 # Don't actually build.
