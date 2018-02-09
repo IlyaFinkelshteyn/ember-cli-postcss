@@ -33,5 +33,6 @@ build: off
 # Set build version format here instead of in the admin panel.
 version: "{build}"
 
-
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
